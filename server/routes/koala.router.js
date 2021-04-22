@@ -37,7 +37,7 @@ koalaRouter.post('/', (req, res) => {
 
 
 // PUT
-koala.put('/:id', (req, res) => {
+koalaRouter.put('/:id', (req, res) => {
   console.log('A koala is ready to transfer');
   const koalaToTransfer = req.params.id;
   const queryText = `UPDATE koala_holla SET ready_to_transfer='true' WHERE it=$1;`;
