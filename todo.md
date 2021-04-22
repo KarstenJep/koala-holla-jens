@@ -7,7 +7,7 @@ DOM
   S[ ] - delete button
   [ ] - CSS
 
-client
+client - Maneena
 [ ] - add koala
     [ ] - id, name, gender, age, ready_to_transfer, notes
       /koala
