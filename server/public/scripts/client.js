@@ -41,16 +41,19 @@ function getKoalas(){
      console.log('Got it!', response);
      //created a loop to get new inputs from client
      for (let i = 0; i < response.length; i++){
+      let button;
+       if(response[i].readyForTransfer === Y){
+        button = `${response[i].readyForTransfer}`
+       } else {
+         button = `<button type="button" class="readyTransfer data-id=${response[i].id}> Ready for Transfer</button>`
+       }
        let newKoal = $(`
        <tr>
           <td>${response[i].name}</td>
           <td>${response[i].age}</td>
           <td>${response[i].gender}</td>
-          <td>${response[i].readyForTransfer}</td>
+          <td>${button}</td>
           <td>${response[i].notes}</td>
-          <td>
-            <button type="button" class="readyTransfer data-id="${response[i].id}"> Ready for Transfer</button>
-          </td>
        </tr>
       `)
       newKoal.data('id', response[i].id);
