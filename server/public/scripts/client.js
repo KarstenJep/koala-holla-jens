@@ -12,6 +12,7 @@ $( document ).ready( function(){
 function setupClickListeners() {
   $( '#addButton' ).on( 'click', function(){
     console.log( 'in addButton on click' );
+    $(`#viewKoalas`).on('click', "readyTransfer",  putOnTransfer);
     // get user input and put in an object
     // NOT WORKING YET :(
     // using a test object
