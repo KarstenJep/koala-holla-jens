@@ -7,16 +7,18 @@ DOM
   S[ ] - delete button
   [ ] - CSS
 
+john
 client - Maneena
 [ ] - add koala
     [ ] - id, name, gender, age, ready_to_transfer, notes
+
       /koala
-  [ ] - button ready_to_transfer
+  [x] - button ready_to_transfer
     /transfer
   S[ ] - delete button
   [ ] - functions
-  [ ] - post /koala
-  [ ] - get /koala
+  [x] - post /koala
+  [x] - get /koala
   [ ] - put /transfer
 
 
