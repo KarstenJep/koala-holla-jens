@@ -41,12 +41,12 @@ function getKoalas(){
      console.log('Got it!', response);
      //created a loop to get new inputs from client
      for (let i = 0; i < response.length; i++){
-      let button;
-       if(response[i].readyForTransfer === Y){
-        button = `${response[i].readyForTransfer}`
-       } else {
-         button = `<button type="button" class="readyTransfer data-id=${response[i].id}> Ready for Transfer</button>`
-       }
+      let button = 0;
+      if(response[i].ready_to_transfer === 'Y'){
+      button = `${response[i].ready_to_transfer}`;
+      } else {
+        button = `<button type="button" class="readyTransfer" data-id=${response[i].id}> Ready for Transfer</button>`
+      }
        let newKoal = $(`
        <tr>
           <td>${response[i].name}</td>
@@ -61,7 +61,6 @@ function getKoalas(){
      } 
    });
 } // end getKoalas
-
 function saveKoala( newKoala ){
   console.log( 'in saveKoala', newKoala );
   // ajax call to server to get koalas
