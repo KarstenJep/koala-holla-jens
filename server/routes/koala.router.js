@@ -23,13 +23,11 @@ koalaRouter.post('/', (req, res) => {
 
   console.log('******************************************************************************************************************************************************************************************************************************************************************************************************************');
   
-  let newKoala = req;
+  let newKoala = req.body;
   console.log(newKoala);
   console.log(newKoala.name);
-  
-  
   const sqlText = `INSERT INTO koala ("name", "gender", "age", "ready_to_transfer", "notes") 
-  VALUES($1, $2, $3, $4, $5);`;
+  VALUES($1, $2, $3, $4, $5) RETURNING id;`;
   console.log('Got a new koala:', newKoala);
   pool.query(sqlText, [newKoala.name, newKoala.gender, newKoala.age, newKoala.readyForTransfer, newKoala.notes])
     .then(results => {
