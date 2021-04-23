@@ -7,9 +7,11 @@ DOM
   S[ ] - delete button
   [ ] - CSS
 
-client
-[x] - add koala
-    [x] - id, name, gender, age, ready_to_transfer, notes
+john
+client - Maneena
+[ ] - add koala
+    [ ] - id, name, gender, age, ready_to_transfer, notes
+
       /koala
   [x] - button ready_to_transfer
     /transfer
