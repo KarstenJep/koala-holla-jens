@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/KarstenJep/koala-holla-jens/issues"
   },
-  "homepage": "https://github.com/KarstenJep/koala-holla-jens#readme"
+  "homepage": "https://github.com/KarstenJep/koala-holla-jens#readme",
+  "devDependencies": {}
 }
